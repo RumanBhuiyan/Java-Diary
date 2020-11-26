@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DataTypes",
+            "request": "launch",
+            "mainClass": "DataTypes",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        }
+    ]
+}
