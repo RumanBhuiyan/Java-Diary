@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Strings",
+            "request": "launch",
+            "mainClass": "Strings",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DataTypes",
             "request": "launch",
             "mainClass": "DataTypes",
