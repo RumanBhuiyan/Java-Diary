@@ -28,5 +28,10 @@ public class DataTypes {
         point1.x = 2;// thats why changes in reference memory value reflected
         System.out.println("After :\n" + point1);
         System.out.println(point2);
+        // Implicit Type Casting
+        // byte->short->int->long->float-double
+        // explicit type casting
+        // double x=5.5;
+        // int y=(int)x+5;
     }
 }
