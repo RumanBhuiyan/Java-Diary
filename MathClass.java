@@ -7,6 +7,7 @@ public class MathClass {
         System.out.println("round value of 2.5: " + Math.round(2.5));
         System.out.println("Converting String to integer: " + Integer.parseInt("123"));
         System.out.println("Converting integer to float: " + Float.parseFloat("2"));
+        System.out.println("Converting string to double: " + Double.parseDouble("2"));
 
     }
 }
