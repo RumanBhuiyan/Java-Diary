@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - InterfaceAccessingClass",
+            "request": "launch",
+            "mainClass": "InterfaceAccessingClass",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - AbstractionAccessingClass",
             "request": "launch",
             "mainClass": "AbstractionAccessingClass",
