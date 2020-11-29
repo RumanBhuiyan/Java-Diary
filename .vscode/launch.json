@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MyArrayList",
+            "request": "launch",
+            "mainClass": "MyArrayList",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - InterfaceAccessingClass",
             "request": "launch",
             "mainClass": "InterfaceAccessingClass",
