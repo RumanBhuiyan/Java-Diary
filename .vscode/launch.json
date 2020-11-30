@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - threads",
+            "request": "launch",
+            "mainClass": "threads",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - iterator",
             "request": "launch",
             "mainClass": "iterator",
