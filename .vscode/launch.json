@@ -3,6 +3,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DequeueInJava",
+            "request": "launch",
+            "mainClass": "DequeueInJava",
+             "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QueueInJava",
+            "request": "launch",
+            "mainClass": "QueueInJava",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LinkedListJava",
+            "request": "launch",
+            "mainClass": "LinkedListJava",
+            "console": "internalConsole",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MyArrayList",
             "request": "launch",
             "mainClass": "MyArrayList",
