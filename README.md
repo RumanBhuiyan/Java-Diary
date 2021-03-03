@@ -1,4 +1,4 @@
-## 1. Hello World
+> ## 1. Hello World
 ```java
 public class TestAll {
 
@@ -8,7 +8,7 @@ public class TestAll {
     }
 }
 ```
-## 2. Data types
+> ## 2. Data types
 ```java
 import java.awt.*;//for using Point 
 
@@ -35,7 +35,7 @@ public class DataTypes {
 // Before changing : java.awt.Point[x=1,y=2]
 //After Changing : java.awt.Point[x=3,y=4]
 ```
-## 3. Taking input 
+> ## 3. Taking input 
 ```java
 import java.util.Scanner;
 public class TestAll {
@@ -49,7 +49,7 @@ public class TestAll {
     }
 }
 ```
-## 4. Conditional Statements
+> ## 4. Conditional Statements
 ```java
         // Ternary Operator
         int num = 5;
@@ -84,7 +84,7 @@ public class TestAll {
                 System.out.println("Number is negative");
         }
 ```
-## 5. Looping
+> ## 5. Looping
 ```java
         // for loop
         for (int i = 0; i < 5; i++)
@@ -109,7 +109,7 @@ public class TestAll {
         for (int keep : numbers) 
             System.out.println("keep : " + keep);        
 ```
-## 6. Math Library
+> ## 6. Math Library
 ```java
         System.out.println("Random number between 0 and 1: " + Math.random());
         System.out.println("Random number between 0 and 100: " + (int) (Math.random() * 100));
@@ -123,7 +123,7 @@ public class TestAll {
         System.out.println("Converting integer to float: " + Float.parseFloat("2"));
         System.out.println("Converting string to double: " + Double.parseDouble("2"));
 ```
-## 7. String Methods
+> ## 7. String Methods
 ```java
         String name = "Ruman Bhuiyan";
         System.out.println("Is String empty : " + name.isEmpty());
@@ -134,3 +134,73 @@ public class TestAll {
         System.out.println("Removing extra spaces : " + name.trim());
         System.out.println("Replacing a character: " + name.replace('R', 'B'));
 ```
+> ## 8. Threads 
+> ### Threads can be created in two way  i)extending Threads class  ii) implementing Runnable interface
+```java
+    // Process 01
+    public class TestAll extends Thread{
+
+    public String name;
+    public int time;
+
+    public static void main(String[] args) {
+
+        TestAll t1 = new TestAll("Ruman", 2000);
+        t1.start();
+    }
+
+    // Initializing variables by calling its constructor
+    TestAll(String name,int time){
+        this.name=name;
+        this.time=time;
+    }
+
+    // Thread.start() will call this method
+    public void run() {
+         try{
+            System.out.println("Hello");
+            Thread.sleep(time);
+            System.out.println(name);
+        } catch (Exception e) {
+             System.out.println(e);
+         }
+        
+    }
+}
+
+```
+```java
+    // Process 02
+    public class TestAll implements Runnable{
+
+    public String name;
+    public int time;
+
+    public static void main(String[] args) {
+        
+        TestAll test = new TestAll("Ruman", 2000);
+        Thread t1 = new Thread(test);
+        t1.start();
+    }
+
+    // Initializing variables by calling its constructor
+    TestAll(String name,int time){
+        this.name=name;
+        this.time=time;
+    }
+
+    // Thread.start() will call this method
+    public void run() {
+         try{
+            System.out.println("Hello");
+            Thread.sleep(time);
+            System.out.println(name);
+        } catch (Exception e) {
+             System.out.println(e);
+         }
+        
+    }
+}
+
+```
+> ### If thread is created by using `extends Threads` then main class gets all property of Threads so we don't need to create an instance of Thread class and pass object of main class to it .Just we have to override `run()` method to say explicitely what to do when `thread.start()` gets called. On the other hand if thread is made by using `implements Runnable` then its required to create an instance of Thread class and pass object of main class to it. **Ruman**
