@@ -123,4 +123,14 @@ public class TestAll {
         System.out.println("Converting integer to float: " + Float.parseFloat("2"));
         System.out.println("Converting string to double: " + Double.parseDouble("2"));
 ```
-
+## 7. String Methods
+```java
+        String name = "Ruman Bhuiyan";
+        System.out.println("Is String empty : " + name.isEmpty());
+        System.out.println("String Length: " + name.length());
+        System.out.println("Index of a character: " + name.indexOf('R'));
+        System.out.println("Lower Case: " + name.toLowerCase());
+        System.out.println("Upper Case : " + name.toUpperCase());
+        System.out.println("Removing extra spaces : " + name.trim());
+        System.out.println("Replacing a character: " + name.replace('R', 'B'));
+```
