@@ -35,7 +35,20 @@ public class DataTypes {
 // Before changing : java.awt.Point[x=1,y=2]
 //After Changing : java.awt.Point[x=3,y=4]
 ```
-> ## 3. Taking input 
+
+> ## 3. Type Casting
+```java
+        // Implicit Type Casting byte(1)->short(2)->int(4)->long(8) etc
+        byte   a = 3;
+        short  b = a;//a converted into short
+        int    c = b;// b converted into int 
+        long d = c;//c converted into long
+        
+        // explicit type casting 
+        System.out.println("Type Cast Double to int: " + (int) 3.95);
+```
+
+> ## 4. Taking input 
 ```java
 import java.util.Scanner;
 public class TestAll {
@@ -49,7 +62,7 @@ public class TestAll {
     }
 }
 ```
-> ## 4. Conditional Statements
+> ## 5. Conditional Statements
 ```java
         // Ternary Operator
         int num = 5;
@@ -84,7 +97,7 @@ public class TestAll {
                 System.out.println("Number is negative");
         }
 ```
-> ## 5. Looping
+> ## 6. Looping
 ```java
         // for loop
         for (int i = 0; i < 5; i++)
@@ -109,7 +122,7 @@ public class TestAll {
         for (int keep : numbers) 
             System.out.println("keep : " + keep);        
 ```
-> ## 6. Math Library
+> ## 7. Math Library
 ```java
         System.out.println("Random number between 0 and 1: " + Math.random());
         System.out.println("Random number between 0 and 100: " + (int) (Math.random() * 100));
@@ -123,7 +136,7 @@ public class TestAll {
         System.out.println("Converting integer to float: " + Float.parseFloat("2"));
         System.out.println("Converting string to double: " + Double.parseDouble("2"));
 ```
-> ## 7. String Methods
+> ## 8. String Methods
 ```java
         String name = "Ruman Bhuiyan";
         System.out.println("Is String empty : " + name.isEmpty());
@@ -134,7 +147,7 @@ public class TestAll {
         System.out.println("Removing extra spaces : " + name.trim());
         System.out.println("Replacing a character: " + name.replace('R', 'B'));
 ```
-> ## 8. Threads 
+> ## 9. Threads 
 > ### Threads can be created in two way  i)extending Threads class  ii) implementing Runnable interface
 ```java
     // Process 01
