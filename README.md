@@ -266,3 +266,42 @@ public class TestAll {
 // count : 1
 // count : 2
 ```
+> ## 10. Garbage Collector
+> In C/C++, programmer is responsible for both creation and destruction of objects. Usually programmer neglects destruction of useless objects.Due to this negligence, at certain point, for creation of new objects, sufficient memory may not be available and entire program will terminateabnormally causing OutOfMemoryErrors.But in Java, the programmer need not to care for all those objects which are no longer in use. Garbage collector destroys these objects.Garbage collector is best example of Daemon thread as it is always running in background.Main objective of Garbage Collector is to free heap memory by destroying
+```java
+//Garbage Collector 
+// 1.https://www.geeksforgeeks.org/garbage-collection-java/
+// 2.https://www.guru99.com/java-garbage-collection.html
+
+public class TestAll extends Thread {
+    
+    public static String name;
+    public static double age; 
+
+    public static void main(String[] args) throws InterruptedException {
+        //creates two block of two variable called name,age in heap memory
+        //they contain the reference of that address of heap memory
+        TestAll first = new TestAll();
+        TestAll second = new TestAll();
+        // null can be assigned only in Reference type object not primitive type
+        // now first doesn't have any reference so block of heap memory will be
+        //garbage collector 
+        first = null;
+        // though JVM performs garbage collection automatically to do this manually
+        // requesting JVM for running Garbage Collector
+        System.gc();
+
+        second = null;
+        // requesting JVM for running Garbage Collector
+        Runtime.getRuntime().gc();
+    }
+        
+    @Override
+    // finalize method is called on object once
+    // before garbage collecting it
+    protected void finalize() throws Throwable {
+        System.out.println("Garbage collector called");
+        System.out.println("Object garbage collected : " + this);
+    }
+}
+```
