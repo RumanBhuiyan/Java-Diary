@@ -203,4 +203,53 @@ public class TestAll {
 }
 
 ```
-> ### If thread is created by using `extends Threads` then main class gets all property of Threads so we don't need to create an instance of Thread class and pass object of main class to it .Just we have to override `run()` method to say explicitely what to do when `thread.start()` gets called. On the other hand if thread is made by using `implements Runnable` then its required to create an instance of Thread class and pass object of main class to it. **Ruman**
+> ### If thread is created by using `extends Threads` then main class gets all property of Threads so we don't need to create an instance of Thread class and pass object of main class to it .Just we have to override `run()` method to say explicitely what to do when `thread.start()` gets called. On the other hand if thread is made by using `implements Runnable` then its required to create an instance of Thread class and pass object of main class to it and `run()` method will remain same alike before. Look if we create thread by `extends Thread` then we can't extend other classes but implement other interfaces.Again if we create thread by `implements Runnable` then we can extend other class too.Thread class  provides some inbuilt methods like `yield()`, `interrupt()` etc. that are not available in Runnable interface.Using runnable will give you an object that can be shared amongst multiple threads. 
+> ### Concurrency Problems : As threads run at the same time as other parts of the program, there is no way to know in which order the code will run. When the threads and main program are reading and writing the same variables, the values are unpredictable. The problems that result from this are called concurrency problems.
+```java
+
+    public class TestAll extends Thread {
+    
+    public static int count = 0;
+    public static void main(String[] args) {
+        
+        TestAll t1 = new TestAll();
+        t1.start();
+        System.out.println("count : " + count);
+        count++;
+        System.out.println("count : " + count);
+        }
+
+    // Thread.start() will call this method
+    public void run() {
+        count++;
+    }
+}
+// outut: 
+// count : 0
+// count : 2
+```
+> ### Solving Concurrency Problem
+```java
+
+    public class TestAll extends Thread {
+    
+    public static int count = 0;
+    public static void main(String[] args) {
+        
+        TestAll t1 = new TestAll();
+        t1.start();
+        while (t1.isAlive()); //dont execute next line untill t1 finished
+        System.out.println("count : " + count);
+        count++;
+        System.out.println("count : " + count);
+        }
+
+    // Thread.start() will call this method
+    public void run() {
+        count++;
+    }
+}
+// outut: 
+// count : 1
+// count : 2
+```
