@@ -3,6 +3,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GarbageCollector",
+            "request": "launch",
+            "mainClass": "GarbageCollector",
+            "console": "externalTerminal",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestAll",
+            "request": "launch",
+            "mainClass": "TestAll",
+            "console": "externalTerminal",
+            "projectName": "Java-Diary_a8fd1b28"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - threads",
             "request": "launch",
             "mainClass": "threads",
