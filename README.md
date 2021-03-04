@@ -558,3 +558,28 @@ public class GarbageCollector {
 }
 
 ```
+> ## 13. Static Class 
+```java
+
+    public class Geometry {
+  
+    public static double getArea(double a, double b) {
+        return a * b;
+    }
+    
+    public static double getVolume(double a, double b, double c) {
+        return a * b * c;
+    }
+}
+
+```
+```java
+    public class TestAll{
+
+    public static void main(String[] args) {
+     
+        System.out.println("Area of Reactangle: " + Geometry.getArea(3, 4));
+        System.out.println("volume : " + Geometry.getVolume(3, 4,5));
+    }
+}
+```
