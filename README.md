@@ -385,3 +385,34 @@ public class GarbageCollector {
 }
 
 ```
+> ## Abstraction
+```java
+     abstract class Geometry {
+  
+     abstract double getArea();
+ 
+     abstract double getVolume();
+}
+```
+```java
+
+    public class TestAll  extends Geometry{
+
+    public static void main(String[] args) {
+      
+        TestAll child = new TestAll();
+
+        System.out.println(child.getArea(3,4));
+        System.out.println(child.getVolume(child.getArea(3,4), 5));
+    }
+
+    public double getArea(double len,double wid) {
+        return len * wid;
+    }
+    
+    public double getVolume(double area,double height) {
+        return area*height;
+    }
+}
+
+```
