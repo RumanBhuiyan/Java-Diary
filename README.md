@@ -506,3 +506,55 @@ public class GarbageCollector {
 }
 
 ```
+> ## Encapsulation (Hiding Data from other classes)
+```java 
+
+    public class Geometry {
+  
+    private String name;
+    private double salary;
+
+    Geometry(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+ 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String s) {
+        name = s;
+    }
+    
+    public void showInfo() {
+        System.out.println(makeInfo());
+    }
+
+    private String makeInfo() {
+        return "Name : " + name + ".Salary : " + salary;
+    }
+}
+
+```
+```java
+// Simply Encapsulation means Data hiding from other classes
+
+        public class TestAll{
+
+        public static void main(String[] args) {
+     
+        Geometry child = new Geometry("Ruman", 45000);
+
+        // you cant access or modify child.name as name is private variable to that class;
+        // you cant access  or modify child.salary as salary is private variable to that class;
+        // child.makeInfo() is a private method only accessible inside Geometry class;
+
+        child.showInfo();
+        System.out.println("Name is " + child.getName());
+        child.setName("Ratul");
+        child.showInfo();
+    }
+}
+
+```
