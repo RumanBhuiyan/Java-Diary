@@ -315,3 +315,73 @@ public class GarbageCollector {
 - ###   When a method is `synchronized` it can be accessed by `only one thread at a time`
 - ###  `volatile` modifier tells to the compiler that the volatile variable can be changed unexpectedly by other parts of a program. Volatile variables are used in case of `multi-threading` program. volatile keyword `cannot be used with a method or a class`. It can be `only used with a variable`.
 >  <img src="photos/Java_Non_Access_Modifiers.png" width="1000" />
+
+> ## 12. OOP (Abstraction, Polymorphism,Inheritance,Encapsulation) <br>
+> ##  Object and Class
+```java
+
+    public class TestAll {
+
+    String name;// name has default access modifier
+    double age;// age has default access modifier
+
+    public static void main(String[] args) {
+
+        TestAll person1 = new TestAll("Ruman", 23);
+        person1.showInfo();
+    }
+
+    // Constructor get called at the time of object creation
+    TestAll(String name, double age) {
+        System.out.println("Constructor called.....");
+        this.name = name;
+        this.age = age;
+    }
+
+    void showInfo() {
+        System.out.println("You are " + name + ".you are " + (int) age + " years old");
+    }
+}
+
+```
+> ## Inheritance 
+```java
+
+    public class Area {
+    
+    final double length;
+    final double width;
+
+    //Constructor 
+    Area(double len, double wid) {
+        length = len;
+        width = wid;
+    }
+  
+    public double getArea() {
+        return length * width;
+    } 
+}
+
+```
+```java
+
+    public class TestAll  extends Area{
+
+    public static void main(String[] args) {
+
+        TestAll child = new TestAll(2, 3);
+        System.out.println("Area is "+child.getArea());
+        System.out.println("volume is " + child.getVolume(child.getArea(), 5));
+    }
+    //constructor
+    TestAll(double len, double wid) {
+        super(len, wid);// calling superclass(Area) constructor
+    }
+    // Adding new property to child class along with parent class properties
+    double getVolume(double area, double hight) {
+        return area * hight;
+    }
+}
+
+```
