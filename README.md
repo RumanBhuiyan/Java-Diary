@@ -304,3 +304,14 @@ public class GarbageCollector {
 }
 
 ```
+> ## 11. Java Modifiers <br>         
+> ## i) Access Modifier(private,default,protected,public) <br>     
+>  <img src="photos/Java_Access_Modifiers.JPG" /> <br>
+> ## ii) Non-Access Modifier (static,final,abstract,transient,synchronized,volatile) <br>
+- ### `static methods or variables` can be accessed by their class name <br>
+- ###  `final class` can't be `inherited (extended)` and `final variables` can't be changed after initialization and `final method` can't be overriden
+- ###   `abstract class` can't be used to create object but if any class `extends` it then it has to implement all the `abstract method` inside the abstract class 
+- ###   When an instance variable is declared as `transient`, then its value doesn't persist when an object is serialized
+- ###   When a method is `synchronized` it can be accessed by `only one thread at a time`
+- ###  `volatile` modifier tells to the compiler that the volatile variable can be changed unexpectedly by other parts of a program. Volatile variables are used in case of `multi-threading` program. volatile keyword `cannot be used with a method or a class`. It can be `only used with a variable`.
+>  <img src="photos/Java_Non_Access_Modifiers.png" width="1000" />
