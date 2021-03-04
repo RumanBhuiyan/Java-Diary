@@ -416,3 +416,51 @@ public class GarbageCollector {
 }
 
 ```
+> ## Interface (As Java doesn't allow multi-inheritance so that case can be achieved by implementing multi-interface)
+```java
+    interface Bio {
+    
+    abstract void getName();
+
+    abstract void getAge();
+}
+```
+```java
+     interface Geometry {
+  
+     abstract double getArea();
+ 
+     abstract double getVolume();
+}
+```
+```java
+
+    public class TestAll implements Bio,Geometry {
+
+    public static void main(String[] args) {
+        
+        TestAll child = new TestAll();
+
+        child.getName();
+        child.getAge();
+    }
+
+    public void getName() {
+        System.out.println("You are Ruman");
+
+    }
+
+    public void getAge() {
+        System.out.println("You are 23 years old");
+    }
+
+    public double getArea(double len, double wid) {
+        return len * wid;
+    }
+
+    public double getVolume(double area, double height) {
+        return area * height;
+    }
+}
+
+```
