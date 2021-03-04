@@ -464,3 +464,45 @@ public class GarbageCollector {
 }
 
 ```
+> ## Polymorphism
+- ### i) Compile Time Polymorphism (Method Overloading ) , Java doesn't support `Operator Overloading`
+- ### ii) Runtime polymorphism => `Dynamic Method Dispatch`  (Method Overriding )  
+```java 
+    public class Geometry {
+  
+    public void getClassName() {
+        System.out.println("Geometry");
+    }
+}
+```
+```java
+// Polymorphism is 2 types 
+// i) Compile-time polymorphism (method overloading)
+// ii) Runtime polymorphism => Dynamic Method Dispatch(method overriding)
+
+    public class TestAll  extends Geometry{
+
+    public static void main(String[] args) {
+      
+        TestAll child = new TestAll();
+          
+        child.getClassName();
+        System.out.println("Summation : "+child.getSummation(2, 3));
+        System.out.println("Summation : " + child.getSummation(2, 3,4));
+    }
+    //Overriding parent's getClassName() method
+    public void getClassName() {
+        System.out.println("TestAll");
+    }
+    
+    public double getSummation(double a, double b) {
+        return a + b;
+    }
+    // java doesn't support operator overloading 
+    //method overloading=>compile time polymorphism
+    public double getSummation(double a, double b,double c) {
+        return a + b+c;
+    }
+}
+
+```
